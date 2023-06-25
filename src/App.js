@@ -1,5 +1,5 @@
 // import router from router dom
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter, HashRouter, Routes, Route} from 'react-router-dom'
 
 // import pages
 import Home from './pages/Home'
@@ -13,7 +13,7 @@ import Slidebar from './components/Sidebar'
 function App() {
   return (
     <div className="overflow-hidden">
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -21,7 +21,7 @@ function App() {
         </Routes>
         <Slidebar />
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
