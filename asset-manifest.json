@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/E-commerece-with-fakeAPI/static/css/main.d4e0e0f0.css",
+    "main.js": "/E-commerece-with-fakeAPI/static/js/main.d0085909.js",
+    "index.html": "/E-commerece-with-fakeAPI/index.html",
+    "main.d4e0e0f0.css.map": "/E-commerece-with-fakeAPI/static/css/main.d4e0e0f0.css.map",
+    "main.d0085909.js.map": "/E-commerece-with-fakeAPI/static/js/main.d0085909.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4e0e0f0.css",
+    "static/js/main.d0085909.js"
+  ]
+}
