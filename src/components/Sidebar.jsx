@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { SidebarContext } from '../Context/SidebarContext'
 import { FiArrowRight } from "react-icons/fi";
+import { AiOutlineClear } from "react-icons/ai";
 import { CartContext } from '../Context/CartContext';
 import CartItem from './CartItem';
 
@@ -19,7 +20,14 @@ const Sidebar = () => {
       </div>
       <div className=''>{cart.map(item => {
         return <CartItem item={item} key={item.id}/>
-      })}</div>
+      })}
+      </div>
+      <div>
+        <div>
+          <div><span>Total: </span>$10000</div>
+          <div className='cursor-pointer '><AiOutlineClear /></div>
+        </div>
+      </div>
     </div>
   )
 }
