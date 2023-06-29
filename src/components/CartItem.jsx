@@ -5,7 +5,7 @@ import { CartContext } from '../Context/CartContext';
 
 
 const CartItem = ({item}) => {
-  const {removeFromCart} = useContext(CartContext)
+  const {removeFromCart, increaseAmount, decreaseAmount} = useContext(CartContext)
   const {id, image, title, price, amount} = item;
   return (
     <div className='flex gap-x-4 py-4 lg:px-4 xl:px-6 border-b border-gray-300 font-light text-gray-500 w-full '>
@@ -23,7 +23,7 @@ const CartItem = ({item}) => {
           <div className='flex gap-x-2 text-sm h-[36px] px-2'>
             <div className='flex items-center justify-between min-w-[100px] max-w-[200px] lg:max-w-[230px] h-full text-sm text-primary border px-2 lg:px-3 font-medium'>
               {/* remove icon */}
-              <div className='cursor-pointer'>
+              <div onClick={() => decreaseAmount(id)} className='cursor-pointer'>
                 <AiOutlineMinus />
               </div>
               {/* amount */}
@@ -31,7 +31,7 @@ const CartItem = ({item}) => {
                 {amount}
               </div>
               {/* add icon */}
-              <div className='cursor-pointer'>
+              <div onClick={() => increaseAmount(id)} className='cursor-pointer'>
                 <AiOutlinePlus />
               </div>
             </div>

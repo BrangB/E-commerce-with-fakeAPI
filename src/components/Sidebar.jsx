@@ -8,8 +8,8 @@ import CartItem from './CartItem';
 
 const Sidebar = () => {
   const {isOpen, handleClose} = useContext(SidebarContext);
-  const {cart} = useContext(CartContext)
-  console.log(cart)
+  const {cart, clearCart} = useContext(CartContext)
+
   return (
     <div className={`${isOpen ? 'right-0' : '-right-full'} w-full h-full bg-white fixed top-0 shadow-xl md:w-[35vw] xl:max-w-[30vw] transition-all duration-300 z-20 px-4 lg:px-[30px]`}>
       <div className='py-6 flex  items-center justify-between border-b'>
@@ -22,10 +22,10 @@ const Sidebar = () => {
         return <CartItem item={item} key={item.id}/>
       })}
       </div>
-      <div>
-        <div>
-          <div><span>Total: </span>$10000</div>
-          <div className='cursor-pointer '><AiOutlineClear /></div>
+      <div className='gap-y-4 mt-2 flex flex-col py-4'>
+        <div className=' flex items-center justify-between w-full'>
+          <div><span className='font-semibold uppercase'>Total: </span>$10000</div>
+        <div className='cursor-pointer w-10 h-10 flex items-center justify-center text-white bg-red-500 py-4 text-lg' onClick={clearCart}><AiOutlineClear /></div>
         </div>
       </div>
     </div>
