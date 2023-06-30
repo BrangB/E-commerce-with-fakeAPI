@@ -9,12 +9,12 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   const {isOpen, handleClose} = useContext(SidebarContext);
-  const {cart, clearCart, total} = useContext(CartContext)
+  const {cart, clearCart, total, itemAmount} = useContext(CartContext)
 
   return (
     <div className={`${isOpen ? 'right-0' : '-right-full'} w-full h-full bg-white fixed top-0 shadow-xl md:w-[35vw] xl:max-w-[30vw] transition-all duration-300 z-20 px-4 lg:px-[30px]`}>
       <div className='py-4 flex  items-center justify-between border-b'>
-        <div className='text-sm uppercase font-semibold'>Shopping Bag (0)</div>
+        <div className='text-sm uppercase font-semibold'>Shopping Bag ({itemAmount})</div>
         <div className='cursor-pointer w-8 h-8 flex justify-center items-center' onClick={handleClose}>
          <FiArrowRight className='text-2xl' />
         </div>
