@@ -5,7 +5,7 @@ import { CartContext } from '../Context/CartContext';
 
 
 const CartItem = ({item}) => {
-  const {removeFromCart, increaseAmount, decreaseAmount} = useContext(CartContext)
+  const {removeFromCart, increaseAmount, decreaseAmount, total} = useContext(CartContext)
   const {id, image, title, price, amount} = item;
   return (
     <div className='flex gap-x-4 py-4 lg:px-4 xl:px-6 border-b border-gray-300 font-light text-gray-500 w-full '>
@@ -36,7 +36,7 @@ const CartItem = ({item}) => {
               </div>
             </div>
             <div className='flex-1 flex h-full items-center justify-around'>$ {price}</div>
-            <div className='flex-1 flex h-full items-center justify-end'>${parseFloat(price * amount).toFixed(2)}</div>
+            <div className='flex-1 flex h-full items-center justify-end'>${parseFloat(total).toFixed(2)}</div>
           </div>
         </div>
       </div>

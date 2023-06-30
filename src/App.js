@@ -12,7 +12,7 @@ import Slidebar from './components/Sidebar'
 
 function App() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden p-0">
       <HashRouter>
         <Header />
         <Routes>

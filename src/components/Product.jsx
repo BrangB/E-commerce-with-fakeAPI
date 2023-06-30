@@ -17,13 +17,13 @@ const Product = ({product}) => {
             <img className='max-h-[140px] group-hover:scale-110 transition-all object-cover' src={image} alt="" />
           </div>
         </div>
-        <div className='absolute top-3 -right-11 group-hover:right-3 bg-red-500/40 p-1 flex flex-col justify-center items-center opacity-0 gap-y-2 group-hover:opacity-100 transition-all duration-300'>
+        <div className='absolute top-3 -right-11 group-hover:right-3 p-1 flex flex-col justify-center items-center opacity-0 gap-y-2 group-hover:opacity-100 transition-all duration-300'>
           <button onClick={() => addToCart(product, id)} >
-            <div className='flex items-center justify-center w-7 h-7 text-white bg-red-500'>
+            <div className='flex items-center justify-center w-8 h-8 text-white bg-red-500 shadow-md'>
               <AiOutlinePlus  className='text-lg'/>
             </div>
           </button>
-          <Link to={`product/${id}`} className='flex items-center justify-center w-7 h-7 text-primary bg-white drop-shadow-lg'>
+          <Link to={`product/${id}`} className='flex items-center justify-center w-8 h-8 shadow-xl text-primary bg-white drop-shadow-lg'>
             <AiOutlineEye className='text-lg'/>
           </Link>
         </div>
